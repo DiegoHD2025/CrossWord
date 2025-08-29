@@ -1,4 +1,4 @@
-using System;
+ï»¿using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -164,7 +164,7 @@ public class CrosswordGame : MonoBehaviour
 
     void PlaceAllWords()
     {
-        // intentos simples de colocación con cruces válidas
+        // intentos simples de colocaciÃ³n con cruces vÃ¡lidas
         foreach (var w in _levelWords)
         {
             TryPlaceWord(w, 500);
@@ -286,31 +286,51 @@ public class CrosswordGame : MonoBehaviour
             {
                 Win();
             }
+            else
+            {
+                // ðŸ”¹ Avanzar automÃ¡ticamente a la siguiente pista no resuelta
+                int currentIndex = _levelWords.IndexOf(_activeWord);
+                int nextIndex = -1;
+                for (int i = currentIndex + 1; i < _levelWords.Count; i++)
+                {
+                    if (!_levelWords[i].solved) { nextIndex = i; break; }
+                }
+                // si no hay siguiente, buscar desde el inicio
+                if (nextIndex == -1)
+                {
+                    for (int i = 0; i < _levelWords.Count; i++)
+                    {
+                        if (!_levelWords[i].solved) { nextIndex = i; break; }
+                    }
+                }
+
+                if (nextIndex != -1) SelectClue(nextIndex);
+            }
         }
         else
         {
-            // opcional: feedback de error
-            // Debug.Log("Respuesta incorrecta");
+            Debug.Log("Respuesta incorrecta");
         }
 
         answerInput.text = "";
         answerInput.ActivateInputField();
     }
 
+
     // ---------- Win/Lose ----------
     void Win()
     {
         _running = false;
-        activeClueText.text = "¡Nivel completado!";
+        activeClueText.text = "Â¡Nivel completado!";
         submitButton.interactable = false;
         answerInput.interactable = false;
-        // aquí puedes cargar siguiente nivel o mostrar panel de victoria
+        // aquÃ­ puedes cargar siguiente nivel o mostrar panel de victoria
     }
 
     void Lose()
     {
         _running = false;
-        activeClueText.text = "Se acabó el tiempo";
+        activeClueText.text = "Se acabÃ³ el tiempo";
         submitButton.interactable = false;
         answerInput.interactable = false;
         // panel de derrota si quieres
@@ -327,17 +347,17 @@ public class CrosswordGame : MonoBehaviour
         // 30 palabras para cubrir los 3 niveles
         string[,] data = {
             {"APPLE","Fruta: empieza con A y termina con E (5)"},
-            {"DOG","Animal doméstico (3)"},
-            {"CAT","Felino doméstico (3)"},
+            {"DOG","Animal domÃ©stico (3)"},
+            {"CAT","Felino domÃ©stico (3)"},
             {"HOUSE","Casa (5)"},
-            {"CAR","Automóvil (3)"},
+            {"CAR","AutomÃ³vil (3)"},
             {"BOOK","Libro (4)"},
             {"TABLE","Mesa (5)"},
             {"CHAIR","Silla (5)"},
             {"WATER","Agua (5)"},
             {"SUN","Sol (3)"},
             {"MOON","Luna (4)"},
-            {"TREE","Árbol (4)"},
+            {"TREE","Ãrbol (4)"},
             {"SCHOOL","Escuela (6)"},
             {"WINDOW","Ventana (6)"},
             {"DOOR","Puerta (4)"},
@@ -353,9 +373,9 @@ public class CrosswordGame : MonoBehaviour
             {"FAMILY","Familia (6)"},
             {"CITY","Ciudad (4)"},
             {"COMPUTER","Computadora (8)"},
-            {"PHONE","Teléfono (5)"},
+            {"PHONE","TelÃ©fono (5)"},
             {"FLOWER","Flor (6)"},
-            {"MUSIC","Música (5)"}
+            {"MUSIC","MÃºsica (5)"}
         };
 
         for (int i = 0; i < data.GetLength(0); i++)
