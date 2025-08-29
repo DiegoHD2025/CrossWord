@@ -135,7 +135,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   letterText: {fileID: 7921476884924708828}
-  background: {fileID: 0}
+  background: {fileID: 7850732320705267195}
   coord: {x: 0, y: 0}
   used: 0
 --- !u!1 &7397415432640006382
