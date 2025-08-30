@@ -6,6 +6,24 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/MenuPrincipal.unity
+    guid: 660e17548c69e0b49bc188221a6ac608
+  - enabled: 1
+    path: Assets/Scenes/MenuDificultad.unity
+    guid: e670ebf9683dfc042818f513293aa469
+  - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/IntermediateGame.unity
+    guid: 2d8c075df882f91438a30bda41970e53
+  - enabled: 1
+    path: Assets/Scenes/AdvanceGame.unity
+    guid: 7ab9f571ad5fcdf41b5d9c9987c19f3c
+  - enabled: 1
+    path: Assets/Scenes/Opciones.unity
+    guid: 981c8408503007c4c9eda8a3a3b54119
+  - enabled: 1
+    path: Assets/Scenes/Comojugar.unity
+    guid: 8832873b13706974cbc01f8f42b96a56
   m_configObjects: {}
