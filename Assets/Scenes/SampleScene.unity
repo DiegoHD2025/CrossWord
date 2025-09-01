@@ -312,6 +312,7 @@ GameObject:
   - component: {fileID: 225236714}
   - component: {fileID: 225236713}
   - component: {fileID: 225236712}
+  - component: {fileID: 225236715}
   m_Layer: 5
   m_Name: ExitButton
   m_TagString: Untagged
@@ -395,6 +396,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 419979585}
+        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
+        m_MethodName: PlayTick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &225236713
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -433,6 +446,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 225236710}
   m_CullTransparentMesh: 1
+--- !u!114 &225236715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 225236710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16954785fde0de94fa11f88f60b841df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &270579440
 GameObject:
   m_ObjectHideFlags: 0
@@ -698,6 +723,54 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 337005056}
   m_CullTransparentMesh: 1
+--- !u!1 &419979584
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 419979586}
+  - component: {fileID: 419979585}
+  m_Layer: 0
+  m_Name: SoundManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &419979585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 419979584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb59fc9217c28cb439f0b36bc2e62498, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tickClip: {fileID: 8300000, guid: 326b97986b941c34c9cf1b62ae8a013c, type: 3}
+  aciertoClip: {fileID: 8300000, guid: b2d9f7edde9d8554c8b65a36bfa479f4, type: 3}
+  errorClip: {fileID: 8300000, guid: e229146d936b66448a3e9e4ab5aa2926, type: 3}
+  victoryClip: {fileID: 8300000, guid: ddc02a6eb9580ee4d82f8ba4080714cb, type: 3}
+--- !u!4 &419979586
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 419979584}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 960, y: 540, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &495579247
 GameObject:
   m_ObjectHideFlags: 0
@@ -1977,7 +2050,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1658899817}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0.9999785
+  m_Size: 0.99997574
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -2157,7 +2230,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.000040671137}
+  m_AnchoredPosition: {x: 0, y: 0.00008870393}
   m_SizeDelta: {x: 0, y: 300}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1714494933
@@ -3081,3 +3154,4 @@ SceneRoots:
   - {fileID: 817965378}
   - {fileID: 773870007}
   - {fileID: 100118884}
+  - {fileID: 419979586}

@@ -268,6 +268,7 @@ public class CrosswordGame : MonoBehaviour
         if (guess == _activeWord.word.ToUpperInvariant())
         {
             // correcto: revelar letras
+            SoundManager.Instance.PlayAcierto();
             for (int i = 0; i < _activeWord.cells.Count; i++)
             {
                 var p = _activeWord.cells[i];
@@ -309,6 +310,7 @@ public class CrosswordGame : MonoBehaviour
         }
         else
         {
+            SoundManager.Instance.PlayError();
             Debug.Log("Respuesta incorrecta");
         }
 
@@ -320,6 +322,7 @@ public class CrosswordGame : MonoBehaviour
     // ---------- Win/Lose ----------
     void Win()
     {
+        SoundManager.Instance.PlayVictory();
         _running = false;
         activeClueText.text = "¡Nivel completado!";
         submitButton.interactable = false;

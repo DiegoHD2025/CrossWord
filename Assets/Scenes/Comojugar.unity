@@ -809,6 +809,7 @@ GameObject:
   - component: {fileID: 965253856}
   - component: {fileID: 965253855}
   - component: {fileID: 965253854}
+  - component: {fileID: 965253857}
   m_Layer: 0
   m_Name: BackToMenu
   m_TagString: Untagged
@@ -892,6 +893,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1626071209}
+        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
+        m_MethodName: PlayTick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &965253855
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -930,6 +943,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 965253852}
   m_CullTransparentMesh: 1
+--- !u!114 &965253857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 965253852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16954785fde0de94fa11f88f60b841df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1436204053
 GameObject:
   m_ObjectHideFlags: 0
@@ -1053,6 +1078,54 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1461973985}
   m_CullTransparentMesh: 1
+--- !u!1 &1626071208
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1626071210}
+  - component: {fileID: 1626071209}
+  m_Layer: 0
+  m_Name: SoundManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1626071209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1626071208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb59fc9217c28cb439f0b36bc2e62498, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tickClip: {fileID: 8300000, guid: 326b97986b941c34c9cf1b62ae8a013c, type: 3}
+  aciertoClip: {fileID: 8300000, guid: b2d9f7edde9d8554c8b65a36bfa479f4, type: 3}
+  errorClip: {fileID: 8300000, guid: e229146d936b66448a3e9e4ab5aa2926, type: 3}
+  victoryClip: {fileID: 8300000, guid: ddc02a6eb9580ee4d82f8ba4080714cb, type: 3}
+--- !u!4 &1626071210
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1626071208}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 960, y: 540, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2003795686
 GameObject:
   m_ObjectHideFlags: 0
@@ -1135,3 +1208,4 @@ SceneRoots:
   - {fileID: 376203133}
   - {fileID: 940893410}
   - {fileID: 1436204055}
+  - {fileID: 1626071210}

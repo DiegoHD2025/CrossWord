@@ -15,7 +15,7 @@ public class MenuDificultadController : MonoBehaviour
 
     public void GoToAdvancedGame()
     {
-        SceneManager.LoadScene("AdvancedGame");
+        SceneManager.LoadScene("AdvanceGame");
     }
 
     public void RegresarAlMenuPrincipal()
